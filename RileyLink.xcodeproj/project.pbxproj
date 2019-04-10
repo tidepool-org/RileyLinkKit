@@ -6,20 +6,6 @@
 	objectVersion = 47;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		43FB610120DDEF26002B996B /* Cartfile */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 43FB610420DDEF26002B996B /* Build configuration list for PBXAggregateTarget "Cartfile" */;
-			buildPhases = (
-				43FB610520DDEF32002B996B /* Build Carthage Dependencies */,
-			);
-			dependencies = (
-			);
-			name = Cartfile;
-			productName = Cartfile;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		2B19B9881DF3EF68006AB65F /* NewTimePumpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19B9871DF3EF68006AB65F /* NewTimePumpEvent.swift */; };
 		2F962EC11E6872170070EFBD /* TimestampedHistoryEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F962EC01E6872170070EFBD /* TimestampedHistoryEventTests.swift */; };
@@ -89,7 +75,6 @@
 		4352A74720DED4AF00CAC200 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB610B20DDF55F002B996B /* LoopKit.framework */; };
 		4352A74820DED80300CAC200 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBE4501EAD238C0073A0B5 /* TimeInterval.swift */; };
 		4352A74920DED81D00CAC200 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EAD6BA1C826B92006DBA60 /* Data.swift */; };
-		4352A74A20DED87500CAC200 /* LoopKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43FB610B20DDF55F002B996B /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4352A74B20DED87F00CAC200 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB610B20DDF55F002B996B /* LoopKit.framework */; };
 		4352A74C20DED8C200CAC200 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB610B20DDF55F002B996B /* LoopKit.framework */; };
 		4352A74D20DED8FC00CAC200 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB610B20DDF55F002B996B /* LoopKit.framework */; };
@@ -146,7 +131,6 @@
 		43BA719D2026C9B00058961E /* ResponseBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA719C2026C9B00058961E /* ResponseBuffer.swift */; };
 		43BF58B01FF594CB00499C46 /* SelectBasalProfileMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BF58AF1FF594CB00499C46 /* SelectBasalProfileMessageBody.swift */; };
 		43BF58B31FF6079600499C46 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBE4501EAD238C0073A0B5 /* TimeInterval.swift */; };
-		43C0196C1FA6B8AE007ABFA1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CA93241CB8BB33000026B5 /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		43C246971D8918AE0031F8D1 /* Crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C246951D8918AE0031F8D1 /* Crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43C246A01D8919E20031F8D1 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2469F1D8919E20031F8D1 /* Crypto.m */; };
 		43C246A11D891BA80031F8D1 /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E535E91991E36700C2AC49 /* NSData+Conversion.m */; };
@@ -154,7 +138,6 @@
 		43C246A91D8A31540031F8D1 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C246931D8918AE0031F8D1 /* Crypto.framework */; };
 		43C246AA1D8A31540031F8D1 /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43C246931D8918AE0031F8D1 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43C9071B1D863772002BAD29 /* MinimedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10D9BC11C8269D500378342 /* MinimedKit.framework */; };
-		43C9071C1D863782002BAD29 /* MinimedKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C10D9BC11C8269D500378342 /* MinimedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43CA93291CB8CF22000026B5 /* ChangeTempBasalCarelinkMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA93281CB8CF22000026B5 /* ChangeTempBasalCarelinkMessageBody.swift */; };
 		43CA932B1CB8CF76000026B5 /* ChangeTimeCarelinkMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA932A1CB8CF76000026B5 /* ChangeTimeCarelinkMessageBody.swift */; };
 		43CA932E1CB8CFA1000026B5 /* ReadTempBasalCarelinkMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA932C1CB8CFA1000026B5 /* ReadTempBasalCarelinkMessageBody.swift */; };
@@ -275,6 +258,8 @@
 		7D70768B1FE09310004AC8EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D70768D1FE09310004AC8EA /* Localizable.strings */; };
 		7D7076901FE09311004AC8EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D7076921FE09311004AC8EA /* InfoPlist.strings */; };
 		7D7076951FE09311004AC8EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D7076971FE09311004AC8EA /* Localizable.strings */; };
+		A9AD06BB225ECA4D00471B4A /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AD06BA225ECA4C00471B4A /* LoopKit.framework */; };
+		A9E521FB225E9EB500EDDEF2 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E521FA225E9EB500EDDEF2 /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C10AB08D1C855613000F102E /* FindDeviceMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10AB08C1C855613000F102E /* FindDeviceMessageBody.swift */; };
 		C10AB08F1C855F34000F102E /* DeviceLinkMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10AB08E1C855F34000F102E /* DeviceLinkMessageBody.swift */; };
 		C10D9BC41C8269D500378342 /* MinimedKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C10D9BC31C8269D500378342 /* MinimedKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -511,40 +496,12 @@
 			remoteGlobalIDString = C12EA236198B436800309FA4;
 			remoteInfo = RileyLink;
 		};
-		4352A71020DEC67300CAC200 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
-		};
-		4352A71320DEC68700CAC200 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
-		};
 		4352A72A20DEC9B700CAC200 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4352A72420DEC9B700CAC200;
 			remoteInfo = MinimedKitUI;
-		};
-		4352A73520DECAE900CAC200 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
-		};
-		4352A74420DED49C00CAC200 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
 		};
 		43722FB91CB9F7640038B7F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -580,13 +537,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 43D5E78D1FAF7BFB004ACDB7;
 			remoteInfo = RileyLinkKitUI;
-		};
-		43FB610820DDF509002B996B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
 		};
 		A9887CEE225E8B88004CD3FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -693,27 +643,9 @@
 			remoteGlobalIDString = C1B3830A1CD0665D00CE7782;
 			remoteInfo = NightscoutUploadKit;
 		};
-		C1C0BE28224BF75600C03B4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C12EA22F198B436800309FA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43FB610120DDEF26002B996B;
-			remoteInfo = Cartfile;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		43B6E0151D24E4610022E6D7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				43C9071C1D863782002BAD29 /* MinimedKit.framework in CopyFiles */,
-				4352A74A20DED87500CAC200 /* LoopKit.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C10D9BB81C82614F00378342 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,7 +735,6 @@
 		43709AEB20E0056F00F941B3 /* RileyLinkKitUI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RileyLinkKitUI.xcassets; sourceTree = "<group>"; };
 		43709AED20E008F300F941B3 /* SetupImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupImageTableViewCell.swift; sourceTree = "<group>"; };
 		43709AEF20E0120F00F941B3 /* SetupImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupImageTableViewCell.xib; sourceTree = "<group>"; };
-		4370A3791FAF8A7400EC666A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.1.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		43722FAE1CB9F7630038B7F2 /* RileyLinkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RileyLinkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43722FB01CB9F7640038B7F2 /* RileyLinkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RileyLinkKit.h; sourceTree = "<group>"; };
 		43722FB21CB9F7640038B7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -828,7 +759,6 @@
 		43C246951D8918AE0031F8D1 /* Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
 		43C246961D8918AE0031F8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C2469F1D8919E20031F8D1 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
-		43CA93241CB8BB33000026B5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		43CA93281CB8CF22000026B5 /* ChangeTempBasalCarelinkMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeTempBasalCarelinkMessageBody.swift; sourceTree = "<group>"; };
 		43CA932A1CB8CF76000026B5 /* ChangeTimeCarelinkMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeTimeCarelinkMessageBody.swift; sourceTree = "<group>"; };
 		43CA932C1CB8CFA1000026B5 /* ReadTempBasalCarelinkMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadTempBasalCarelinkMessageBody.swift; sourceTree = "<group>"; };
@@ -865,8 +795,8 @@
 		43DFB61420D3791A008A7BAE /* ChangeMaxBasalRateMessageBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMaxBasalRateMessageBody.swift; sourceTree = "<group>"; };
 		43EBE4501EAD238C0073A0B5 /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		43F348051D596270009933DC /* HKUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUnit.swift; sourceTree = "<group>"; };
-		43FB610A20DDF55E002B996B /* LoopKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopKitUI.framework; path = Carthage/Build/iOS/LoopKitUI.framework; sourceTree = "<group>"; };
-		43FB610B20DDF55F002B996B /* LoopKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopKit.framework; path = Carthage/Build/iOS/LoopKit.framework; sourceTree = "<group>"; };
+		43FB610A20DDF55E002B996B /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FB610B20DDF55F002B996B /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FF221B1CB9B9DE00024F30 /* NSDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateComponents.swift; sourceTree = "<group>"; };
 		492526701E4521FB00ACBA5F /* NoteNightscoutTreatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteNightscoutTreatment.swift; sourceTree = "<group>"; };
 		541688DA1DB820BF005B1891 /* ReadCurrentGlucosePageMessageBodyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadCurrentGlucosePageMessageBodyTests.swift; sourceTree = "<group>"; };
@@ -1073,6 +1003,8 @@
 		7D70768C1FE09310004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D7076911FE09311004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D7076961FE09311004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A9AD06BA225ECA4C00471B4A /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E521FA225E9EB500EDDEF2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C10AB08C1C855613000F102E /* FindDeviceMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindDeviceMessageBody.swift; sourceTree = "<group>"; };
 		C10AB08E1C855F34000F102E /* DeviceLinkMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceLinkMessageBody.swift; sourceTree = "<group>"; };
 		C10D9BC11C8269D500378342 /* MinimedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MinimedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1303,7 +1235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B44CA7224BDFDF00DE47E5 /* LoopKit.framework in Frameworks */,
-				43C0196C1FA6B8AE007ABFA1 /* CoreBluetooth.framework in Frameworks */,
+				A9E521FB225E9EB500EDDEF2 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1415,6 +1347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AD06BB225ECA4D00471B4A /* LoopKit.framework in Frameworks */,
 				43C246A61D891DBF0031F8D1 /* Crypto.framework in Frameworks */,
 				C1B383301CD0680800CE7782 /* MinimedKit.framework in Frameworks */,
 			);
@@ -1844,10 +1777,10 @@
 		C12EA239198B436800309FA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD06BA225ECA4C00471B4A /* LoopKit.framework */,
+				A9E521FA225E9EB500EDDEF2 /* CoreBluetooth.framework */,
 				43FB610B20DDF55F002B996B /* LoopKit.framework */,
 				43FB610A20DDF55E002B996B /* LoopKitUI.framework */,
-				43CA93241CB8BB33000026B5 /* CoreBluetooth.framework */,
-				4370A3791FAF8A7400EC666A /* CoreBluetooth.framework */,
 				C12616431B685F0A001FAD87 /* CoreData.framework */,
 				C12EA23A198B436800309FA4 /* Foundation.framework */,
 				C12EA23C198B436800309FA4 /* CoreGraphics.framework */,
@@ -2218,7 +2151,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C1C0BE29224BF75600C03B4D /* PBXTargetDependency */,
 			);
 			name = RileyLinkBLEKit;
 			productName = RileyLinkBLEKit;
@@ -2258,7 +2190,6 @@
 			dependencies = (
 				A9887CEF225E8B88004CD3FD /* PBXTargetDependency */,
 				A9887CF1225E8B94004CD3FD /* PBXTargetDependency */,
-				4352A73620DECAE900CAC200 /* PBXTargetDependency */,
 			);
 			name = MinimedKitUI;
 			productName = MinimedKitUI;
@@ -2278,7 +2209,6 @@
 			);
 			dependencies = (
 				A9887CF9225E8BFE004CD3FD /* PBXTargetDependency */,
-				4352A71120DEC67300CAC200 /* PBXTargetDependency */,
 			);
 			name = RileyLinkKit;
 			productName = RileyLinkKit;
@@ -2335,7 +2265,6 @@
 			);
 			dependencies = (
 				A9887CF3225E8BA7004CD3FD /* PBXTargetDependency */,
-				43FB610920DDF509002B996B /* PBXTargetDependency */,
 			);
 			name = RileyLinkKitUI;
 			productName = RileyLinkKitUI;
@@ -2356,7 +2285,6 @@
 			dependencies = (
 				A9887CFB225E8C0D004CD3FD /* PBXTargetDependency */,
 				A9887CFD225E8C10004CD3FD /* PBXTargetDependency */,
-				4352A71420DEC68700CAC200 /* PBXTargetDependency */,
 			);
 			name = MinimedKit;
 			productName = MinimedKit;
@@ -2395,7 +2323,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4352A74520DED49C00CAC200 /* PBXTargetDependency */,
 				43C246A31D891D6C0031F8D1 /* PBXTargetDependency */,
 				C10D9BD51C8269D500378342 /* PBXTargetDependency */,
 				43722FC21CB9F7640038B7F2 /* PBXTargetDependency */,
@@ -2455,7 +2382,7 @@
 				C1B383101CD0665D00CE7782 /* Sources */,
 				C1B383111CD0665D00CE7782 /* Frameworks */,
 				C1B383121CD0665D00CE7782 /* Resources */,
-				43B6E0151D24E4610022E6D7 /* CopyFiles */,
+				A9F2C3DF225ECEC300C3B796 /* Copy Frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -2513,10 +2440,6 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
-					};
-					43FB610120DDEF26002B996B = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
 					};
 					C10D9BC01C8269D500378342 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -2581,7 +2504,6 @@
 				431CE7761F98564200255374 /* RileyLinkBLEKitTests */,
 				43D5E78D1FAF7BFB004ACDB7 /* RileyLinkKitUI */,
 				4352A72420DEC9B700CAC200 /* MinimedKitUI */,
-				43FB610120DDEF26002B996B /* Cartfile */,
 			);
 		};
 /* End PBXProject section */
@@ -2711,8 +2633,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LoopKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/LoopKitUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/LoopKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/LoopKitUI.framework",
 			);
 			name = "Copy Frameworks with Carthage";
 			outputPaths = (
@@ -2721,21 +2643,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "CARTHAGE_BUILD_DIR=\"${SRCROOT}/Carthage/Build\"\nif [ -n \"${IPHONEOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/iOS\"\nelif [ -n \"${WATCHOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/watchOS\"\nelse\n    echo \"ERROR: Unexpected deployment target type\"\n    exit 1\nfi\n\nfor SCRIPT_INPUT_FILE in ${!SCRIPT_INPUT_FILE_*}; do\n    CARTHAGE_BUILD_FILE=\"${!SCRIPT_INPUT_FILE/${BUILT_PRODUCTS_DIR}/${CARTHAGE_BUILD_DIR}}\"\n    if [ -e \"${CARTHAGE_BUILD_FILE}\" ]; then\n        if [ -e \"${SCRIPT_INPUT_FILE}\" ]; then\n            echo \"ERROR: Duplicate frameworks found at:\"\n            echo \"  ${SCRIPT_INPUT_FILE}\"\n            echo \"  ${CARTHAGE_BUILD_FILE}\"\n            exit 1\n        fi\n        echo \"Substituting \\\"${CARTHAGE_BUILD_FILE}\\\" for \\\"${!SCRIPT_INPUT_FILE}\\\"\"\n        export ${SCRIPT_INPUT_FILE}=\"${CARTHAGE_BUILD_FILE}\"\n    fi\ndone\n\necho \"Copy Frameworks with Carthage\"\ncarthage copy-frameworks\n";
 		};
-		43FB610520DDEF32002B996B /* Build Carthage Dependencies */ = {
+		A9F2C3DF225ECEC300C3B796 /* Copy Frameworks with Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Build Carthage Dependencies";
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/LoopKit.framework",
+			);
+			name = "Copy Frameworks with Carthage";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LoopKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -d $PROJECT_DIR/../../../Loop.xcworkspace ]; then\n    echo \"Skipping carthage build because we're in a workspace\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\nif [ $ACTION = \"install\" ]; then\n    echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\nfi\nelse\n    echo \"Bootstrapping carthage dependencies\"\n    unset LLVM_TARGET_TRIPLE_SUFFIX\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
+			shellScript = "CARTHAGE_BUILD_DIR=\"${SRCROOT}/Carthage/Build\"\nif [ -n \"${IPHONEOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/iOS\"\nelif [ -n \"${WATCHOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/watchOS\"\nelse\n    echo \"ERROR: Unexpected deployment target type\"\n    exit 1\nfi\n\nfor SCRIPT_INPUT_FILE in ${!SCRIPT_INPUT_FILE_*}; do\n    CARTHAGE_BUILD_FILE=\"${!SCRIPT_INPUT_FILE/${BUILT_PRODUCTS_DIR}/${CARTHAGE_BUILD_DIR}}\"\n    if [ -e \"${CARTHAGE_BUILD_FILE}\" ]; then\n        if [ -e \"${SCRIPT_INPUT_FILE}\" ]; then\n            echo \"ERROR: Duplicate frameworks found at:\"\n            echo \"  ${SCRIPT_INPUT_FILE}\"\n            echo \"  ${CARTHAGE_BUILD_FILE}\"\n            exit 1\n        fi\n        echo \"Substituting \\\"${CARTHAGE_BUILD_FILE}\\\" for \\\"${!SCRIPT_INPUT_FILE}\\\"\"\n        export ${SCRIPT_INPUT_FILE}=\"${CARTHAGE_BUILD_FILE}\"\n    fi\ndone\n\necho \"Copy Frameworks with Carthage\"\ncarthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3230,30 +3158,10 @@
 			target = C12EA236198B436800309FA4 /* RileyLink */;
 			targetProxy = 4327EEBA20E1E562002598CB /* PBXContainerItemProxy */;
 		};
-		4352A71120DEC67300CAC200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = 4352A71020DEC67300CAC200 /* PBXContainerItemProxy */;
-		};
-		4352A71420DEC68700CAC200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = 4352A71320DEC68700CAC200 /* PBXContainerItemProxy */;
-		};
 		4352A72B20DEC9B700CAC200 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4352A72420DEC9B700CAC200 /* MinimedKitUI */;
 			targetProxy = 4352A72A20DEC9B700CAC200 /* PBXContainerItemProxy */;
-		};
-		4352A73620DECAE900CAC200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = 4352A73520DECAE900CAC200 /* PBXContainerItemProxy */;
-		};
-		4352A74520DED49C00CAC200 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = 4352A74420DED49C00CAC200 /* PBXContainerItemProxy */;
 		};
 		43722FBA1CB9F7640038B7F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3279,11 +3187,6 @@
 			isa = PBXTargetDependency;
 			target = 43D5E78D1FAF7BFB004ACDB7 /* RileyLinkKitUI */;
 			targetProxy = 43D5E7931FAF7BFB004ACDB7 /* PBXContainerItemProxy */;
-		};
-		43FB610920DDF509002B996B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = 43FB610820DDF509002B996B /* PBXContainerItemProxy */;
 		};
 		A9887CEF225E8B88004CD3FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3359,11 +3262,6 @@
 			isa = PBXTargetDependency;
 			target = C1B3830A1CD0665D00CE7782 /* NightscoutUploadKit */;
 			targetProxy = C1B3831E1CD0665D00CE7782 /* PBXContainerItemProxy */;
-		};
-		C1C0BE29224BF75600C03B4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43FB610120DDEF26002B996B /* Cartfile */;
-			targetProxy = C1C0BE28224BF75600C03B4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3704,7 +3602,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RileyLinkBLEKit/Info.plist;
@@ -3714,12 +3612,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.RileyLinkBLEKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
@@ -3746,7 +3642,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RileyLinkBLEKit/Info.plist;
@@ -3756,10 +3652,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.RileyLinkBLEKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
@@ -3920,7 +3814,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = RileyLinkKit/Info.plist;
@@ -3930,11 +3824,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.RileyLinkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3959,7 +3851,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = RileyLinkKit/Info.plist;
@@ -3969,10 +3861,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.RileyLinkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4171,22 +4061,6 @@
 			};
 			name = Release;
 		};
-		43FB610220DDEF26002B996B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		43FB610320DDEF26002B996B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		C10D9BD91C8269D600378342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4205,7 +4079,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = MinimedKit/Info.plist;
@@ -4215,11 +4089,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.MinimedKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4243,7 +4115,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = MinimedKit/Info.plist;
@@ -4253,10 +4125,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rileylink.MinimedKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchos watchsimulator";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4318,10 +4188,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CARTHAGE_PLATFORM_PATH_iphoneos = iOS;
-				CARTHAGE_PLATFORM_PATH_iphonesimulator = iOS;
-				CARTHAGE_PLATFORM_PATH_watchos = watchOS;
-				CARTHAGE_PLATFORM_PATH_watchsimulator = watchOS;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -4385,10 +4251,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CARTHAGE_PLATFORM_PATH_iphoneos = iOS;
-				CARTHAGE_PLATFORM_PATH_iphonesimulator = iOS;
-				CARTHAGE_PLATFORM_PATH_watchos = watchOS;
-				CARTHAGE_PLATFORM_PATH_watchsimulator = watchOS;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -4551,6 +4413,10 @@
 				DYLIB_CURRENT_VERSION = 46;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = NightscoutUploadKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -4583,6 +4449,10 @@
 				DYLIB_CURRENT_VERSION = 46;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = NightscoutUploadKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -4709,15 +4579,6 @@
 			buildConfigurations = (
 				43D5E7981FAF7BFB004ACDB7 /* Debug */,
 				43D5E7991FAF7BFB004ACDB7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43FB610420DDEF26002B996B /* Build configuration list for PBXAggregateTarget "Cartfile" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43FB610220DDEF26002B996B /* Debug */,
-				43FB610320DDEF26002B996B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
