@@ -9,7 +9,6 @@ import HealthKit
 import LoopKit
 import RileyLinkKit
 import RileyLinkBLEKit
-import os.log
 
 public protocol MinimedPumpManagerStateObserver: class {
     func didUpdatePumpManagerState(_ state: MinimedPumpManagerState)
@@ -141,7 +140,7 @@ public class MinimedPumpManager: RileyLinkPumpManager {
     private let cgmDelegate = WeakSynchronizedDelegate<CGMManagerDelegate>()
     private let pumpDelegate = WeakSynchronizedDelegate<PumpManagerDelegate>()
 
-    public let log = OSLog(category: "MinimedPumpManager")
+    public let log = DiagnosticLog(category: "MinimedPumpManager")
 
     // MARK: - CGMManager
 

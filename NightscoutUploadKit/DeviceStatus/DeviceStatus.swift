@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LoopKit
 
 public struct DeviceStatus {
     let device: String

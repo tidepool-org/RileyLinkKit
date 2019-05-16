@@ -6,6 +6,7 @@
 //  Copyright © 2016 Pete Schwamb. All rights reserved.
 //
 
+import LoopKit
 import MinimedKit
 import Crypto
 
@@ -32,7 +33,8 @@ public class NightscoutUploader {
     
     public var siteURL: URL
     public var apiSecret: String
-    
+    public let log = DiagnosticLog(category: "NightscoutUploader")
+
     private(set) var entries = [NightscoutEntry]()
     private(set) var deviceStatuses = [[String: Any]]()
     private(set) var treatmentsQueue = [NightscoutTreatment]()

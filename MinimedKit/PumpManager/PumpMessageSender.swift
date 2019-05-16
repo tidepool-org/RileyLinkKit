@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import LoopKit
 import RileyLinkBLEKit
-import os.log
 
 private let standardPumpResponseWindow: TimeInterval = .milliseconds(200)
 
-private let log = OSLog(category: "PumpMessageSender")
+private let log = DiagnosticLog(category: "PumpMessageSender")
 
 
 protocol PumpMessageSender {

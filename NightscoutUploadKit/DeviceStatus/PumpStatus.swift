@@ -7,28 +7,9 @@
 //
 
 import Foundation
+import LoopKit
 
-public struct PumpStatus {
-    let clock: Date
-    let pumpID: String
-    let iob: IOBStatus?
-    let battery: BatteryStatus?
-    let suspended: Bool?
-    let bolusing: Bool?
-    let reservoir: Double?
-    let secondsFromGMT: Int?
-
-    public init(clock: Date, pumpID: String, iob: IOBStatus? = nil, battery: BatteryStatus? = nil, suspended: Bool? = nil, bolusing: Bool? = nil, reservoir: Double? = nil, secondsFromGMT: Int? = nil) {
-        self.clock = clock
-        self.pumpID = pumpID
-        self.iob = iob
-        self.battery = battery
-        self.suspended = suspended
-        self.bolusing = bolusing
-        self.reservoir = reservoir
-        self.secondsFromGMT = secondsFromGMT
-    }
-    
+extension PumpStatus {
     public var dictionaryRepresentation: [String: Any] {
         var rval = [String: Any]()
         

@@ -12,10 +12,8 @@ import RileyLinkKitUI
 import RileyLinkBLEKit
 import MinimedKit
 import MinimedKitUI
-import NightscoutUploadKit
 import LoopKit
 import LoopKitUI
-import os.log
 import UserNotifications
 
 class DeviceDataManager {
@@ -30,7 +28,7 @@ class DeviceDataManager {
     }
     
 
-    public let log = OSLog(category: "DeviceDataManager")
+    public let log = DiagnosticLog(category: "DeviceDataManager")
     
     init() {
         

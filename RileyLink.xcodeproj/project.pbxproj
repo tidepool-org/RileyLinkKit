@@ -24,11 +24,6 @@
 		431CE78F1F985B6E00255374 /* CBPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE78E1F985B6E00255374 /* CBPeripheral.swift */; };
 		431CE7911F985D8D00255374 /* RileyLinkDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7901F985D8D00255374 /* RileyLinkDeviceManager.swift */; };
 		431CE7931F985DE700255374 /* PeripheralManager+RileyLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7921F985DE700255374 /* PeripheralManager+RileyLink.swift */; };
-		431CE7961F9B0F0200255374 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
-		431CE7971F9B0F0200255374 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
-		431CE7981F9B0F0200255374 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
-		431CE7991F9B0F0200255374 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
-		431CE79A1F9B0F1600255374 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
 		431CE79C1F9B21BA00255374 /* RileyLinkDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE79B1F9B21BA00255374 /* RileyLinkDevice.swift */; };
 		431CE79E1F9BE73900255374 /* BLEFirmwareVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE79D1F9BE73900255374 /* BLEFirmwareVersion.swift */; };
 		431CE79F1F9C670600255374 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBE4501EAD238C0073A0B5 /* TimeInterval.swift */; };
@@ -102,8 +97,6 @@
 		43709ADE20DF1D5400F941B3 /* MinimedPumpManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43709AE020DF1D5400F941B3 /* MinimedPumpManager.storyboard */; };
 		43709AE120DF1F0D00F941B3 /* IdentifiableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431185AE1CF25A590059ED98 /* IdentifiableClass.swift */; };
 		43709AE220DF1FDD00F941B3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4A9581D1E6357003B8985 /* UITableViewCell.swift */; };
-		43709AE320DF20D400F941B3 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
-		43709AE420DF20D500F941B3 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE7941F9B0DAE00255374 /* OSLog.swift */; };
 		43709AE720DF22E400F941B3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC601D3D75470049CF85 /* UIColor.swift */; };
 		43709AE820DF22E700F941B3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC601D3D75470049CF85 /* UIColor.swift */; };
 		43709AEC20E0056F00F941B3 /* RileyLinkKitUI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43709AEB20E0056F00F941B3 /* RileyLinkKitUI.xcassets */; };
@@ -260,6 +253,14 @@
 		7D70768B1FE09310004AC8EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D70768D1FE09310004AC8EA /* Localizable.strings */; };
 		7D7076901FE09311004AC8EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D7076921FE09311004AC8EA /* InfoPlist.strings */; };
 		7D7076951FE09311004AC8EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D7076971FE09311004AC8EA /* Localizable.strings */; };
+		A92CF73822B9489A00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73922B948D800CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73A22B948D900CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73B22B948DB00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73C22B948DB00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73D22B948DC00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF73E22B948DC00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
+		A92CF74222B9490C00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */; };
 		C10AB08D1C855613000F102E /* FindDeviceMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10AB08C1C855613000F102E /* FindDeviceMessageBody.swift */; };
 		C10AB08F1C855F34000F102E /* DeviceLinkMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10AB08E1C855F34000F102E /* DeviceLinkMessageBody.swift */; };
 		C10D9BC41C8269D500378342 /* MinimedKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C10D9BC31C8269D500378342 /* MinimedKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -686,7 +687,6 @@
 		431CE78E1F985B6E00255374 /* CBPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBPeripheral.swift; sourceTree = "<group>"; };
 		431CE7901F985D8D00255374 /* RileyLinkDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RileyLinkDeviceManager.swift; sourceTree = "<group>"; };
 		431CE7921F985DE700255374 /* PeripheralManager+RileyLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeripheralManager+RileyLink.swift"; sourceTree = "<group>"; };
-		431CE7941F9B0DAE00255374 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		431CE79B1F9B21BA00255374 /* RileyLinkDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RileyLinkDevice.swift; sourceTree = "<group>"; };
 		431CE79D1F9BE73900255374 /* BLEFirmwareVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEFirmwareVersion.swift; sourceTree = "<group>"; };
 		431CE7A01F9D195600255374 /* CBCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBCentralManager.swift; sourceTree = "<group>"; };
@@ -1005,6 +1005,7 @@
 		7D70768C1FE09310004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D7076911FE09311004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D7076961FE09311004AC8EA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiagnosticLog+Subsystem.swift"; sourceTree = "<group>"; };
 		C10AB08C1C855613000F102E /* FindDeviceMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindDeviceMessageBody.swift; sourceTree = "<group>"; };
 		C10AB08E1C855F34000F102E /* DeviceLinkMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceLinkMessageBody.swift; sourceTree = "<group>"; };
 		C10D9BC11C8269D500378342 /* MinimedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MinimedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1581,17 +1582,17 @@
 			isa = PBXGroup;
 			children = (
 				C1C659181E16BA9D0025CC58 /* CaseCountable.swift */,
+				C145BF9D2219F2EC00A977CB /* Comparable.swift */,
 				C1EAD6BA1C826B92006DBA60 /* Data.swift */,
+				A96A596B22B8128A00229EB4 /* DiagnosticLog+Subsystem.swift */,
 				4352A73D20DED01700CAC200 /* HKUnit.swift */,
 				431185AE1CF25A590059ED98 /* IdentifiableClass.swift */,
+				7D2366EF212527DA0028B67D /* LocalizedString.swift */,
 				C14FFC5A1D3D74F90049CF85 /* NibLoadable.swift */,
 				43323EA61FA81A0F003FB0FA /* NumberFormatter.swift */,
-				431CE7941F9B0DAE00255374 /* OSLog.swift */,
 				43EBE4501EAD238C0073A0B5 /* TimeInterval.swift */,
 				4345D1CD1DA16AF300BAAD22 /* TimeZone.swift */,
 				C14FFC601D3D75470049CF85 /* UIColor.swift */,
-				7D2366EF212527DA0028B67D /* LocalizedString.swift */,
-				C145BF9D2219F2EC00A977CB /* Comparable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2677,6 +2678,7 @@
 				431CE78F1F985B6E00255374 /* CBPeripheral.swift in Sources */,
 				431CE79F1F9C670600255374 /* TimeInterval.swift in Sources */,
 				433ABFFC2016FDF700E6C1FF /* RileyLinkDeviceError.swift in Sources */,
+				A92CF73822B9489A00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				43BA719B202591A70058961E /* Response.swift in Sources */,
 				43D5E7881FAEDAC4004ACDB7 /* PeripheralManagerError.swift in Sources */,
 				C12572982125FA390061BA2F /* RileyLinkConnectionManager.swift in Sources */,
@@ -2689,7 +2691,6 @@
 				431CE79E1F9BE73900255374 /* BLEFirmwareVersion.swift in Sources */,
 				432847C31FA57C0F00CDE69C /* RadioFirmwareVersion.swift in Sources */,
 				431CE7931F985DE700255374 /* PeripheralManager+RileyLink.swift in Sources */,
-				431CE79A1F9B0F1600255374 /* OSLog.swift in Sources */,
 				43047FC91FAECA8700508343 /* Data.swift in Sources */,
 				431CE7A51F9D78F500255374 /* RFPacket.swift in Sources */,
 			);
@@ -2723,12 +2724,12 @@
 				43709AD620DF1CF800F941B3 /* MinimedPumpSentrySetupViewController.swift in Sources */,
 				C145BF9F2219F37200A977CB /* Comparable.swift in Sources */,
 				43709AE720DF22E400F941B3 /* UIColor.swift in Sources */,
-				43709AE320DF20D400F941B3 /* OSLog.swift in Sources */,
 				43709AE120DF1F0D00F941B3 /* IdentifiableClass.swift in Sources */,
 				4352A74320DED3F200CAC200 /* NumberFormatter.swift in Sources */,
 				4352A73220DEC9D600CAC200 /* CommandResponseViewController.swift in Sources */,
 				43709AC520DF1C8B00F941B3 /* RadioSelectionTableViewController.swift in Sources */,
 				4352A73920DECBAA00CAC200 /* RileyLinkMinimedDeviceTableViewController.swift in Sources */,
+				A92CF73922B948D800CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				4352A74220DED3D200CAC200 /* CaseCountable.swift in Sources */,
 				43709AC620DF1C8B00F941B3 /* MinimedPumpSettingsViewController.swift in Sources */,
 				43709AC720DF1C8B00F941B3 /* MinimedPumpManager+UI.swift in Sources */,
@@ -2745,8 +2746,8 @@
 				43EBE4531EAD23CE0073A0B5 /* TimeInterval.swift in Sources */,
 				434AB0C71CBCB76400422F4A /* Data.swift in Sources */,
 				4352A74120DED23100CAC200 /* RileyLinkDeviceManager.swift in Sources */,
-				431CE7961F9B0F0200255374 /* OSLog.swift in Sources */,
 				435D26B020DA08CE00891C17 /* RileyLinkPumpManager.swift in Sources */,
+				A92CF73D22B948DC00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2764,6 +2765,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C246A11D891BA80031F8D1 /* NSData+Conversion.m in Sources */,
+				A92CF73B22B948DB00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				43C246A01D8919E20031F8D1 /* Crypto.m in Sources */,
 				7D2366F4212527DA0028B67D /* LocalizedString.swift in Sources */,
 			);
@@ -2788,9 +2790,9 @@
 				43709ABF20DF1C6400F941B3 /* RileyLinkSettingsViewController.swift in Sources */,
 				43709ABD20DF1C6400F941B3 /* RileyLinkSetupTableViewController.swift in Sources */,
 				43D5E79C1FAF7C47004ACDB7 /* RileyLinkDeviceTableViewController.swift in Sources */,
+				A92CF73A22B948D900CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				43709ABE20DF1C6400F941B3 /* RileyLinkManagerSetupViewController.swift in Sources */,
 				43D5E7A01FAF7CCA004ACDB7 /* NumberFormatter.swift in Sources */,
-				43709AE420DF20D500F941B3 /* OSLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2945,7 +2947,6 @@
 				43CA932F1CB8CFA1000026B5 /* ReadTimeCarelinkMessageBody.swift in Sources */,
 				43CEC07420D0949B00F1BC19 /* ReadRemoteControlIDsMessageBody.swift in Sources */,
 				43D8708D20DE1C05006B549E /* DoseStore.swift in Sources */,
-				431CE7971F9B0F0200255374 /* OSLog.swift in Sources */,
 				43D870A420DE1E88006B549E /* PumpOps.swift in Sources */,
 				2FDE1A071E57B12D00B56A27 /* ReadCurrentPageNumberMessageBody.swift in Sources */,
 				43EBE4521EAD23C40073A0B5 /* TimeInterval.swift in Sources */,
@@ -2970,6 +2971,7 @@
 				C1842C191C8FA45100DB42AC /* ChangeBolusScrollStepSizePumpEvent.swift in Sources */,
 				C1842C171C8FA45100DB42AC /* ChangeCaptureEventEnablePumpEvent.swift in Sources */,
 				54BC44B91DB81D6100340EED /* GetGlucosePageMessageBody.swift in Sources */,
+				A92CF73E22B948DC00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				43D8709B20DE1CB6006B549E /* MinimedPumpManager.swift in Sources */,
 				43B0ADC41D12506A00AAD278 /* NSDateFormatter.swift in Sources */,
 				43CA932B1CB8CF76000026B5 /* ChangeTimeCarelinkMessageBody.swift in Sources */,
@@ -3059,12 +3061,12 @@
 				43462E8B1CCB06F500F958A8 /* AppDelegate.swift in Sources */,
 				C125728C2121D4D60061BA2F /* UITableViewCell.swift in Sources */,
 				C14FFC551D3D72A50049CF85 /* UIViewController.swift in Sources */,
+				A92CF74222B9490C00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				7D2366F0212527DA0028B67D /* LocalizedString.swift in Sources */,
 				C14FFC651D3D7E250049CF85 /* RemoteDataManager.swift in Sources */,
 				C17884611D519F1E00405663 /* BatteryIndicator.swift in Sources */,
 				437462391FA9287A00643383 /* RileyLinkDevice.swift in Sources */,
 				C1274F801D82411C0002912B /* MainViewController.swift in Sources */,
-				431CE7981F9B0F0200255374 /* OSLog.swift in Sources */,
 				C1EF58881B3F93FE001C8C80 /* Config.m in Sources */,
 				C125728F2121DB7C0061BA2F /* PumpManagerState.swift in Sources */,
 				C14FFC631D3D7CE20049CF85 /* NightscoutService.swift in Sources */,
@@ -3103,11 +3105,11 @@
 				C1A492651D4A5DEB008964FF /* BatteryStatus.swift in Sources */,
 				C1A492631D4A5A19008964FF /* IOBStatus.swift in Sources */,
 				C184875E20BCDB0000ABE9E7 /* ForecastError.swift in Sources */,
-				431CE7991F9B0F0200255374 /* OSLog.swift in Sources */,
 				43F348061D596270009933DC /* HKUnit.swift in Sources */,
 				C133CF931D5943780034B82D /* PredictedBG.swift in Sources */,
 				C1D00E9D1E8986A400B733B7 /* PumpSuspendTreatment.swift in Sources */,
 				C1AF21E41D4865320088C41D /* LoopStatus.swift in Sources */,
+				A92CF73C22B948DB00CDC13A /* DiagnosticLog+Subsystem.swift in Sources */,
 				43EBE4541EAD23EC0073A0B5 /* TimeInterval.swift in Sources */,
 				C13D155A1DAACE8400ADC044 /* Either.swift in Sources */,
 				C1AF21F11D4901220088C41D /* NightscoutTreatment.swift in Sources */,

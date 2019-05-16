@@ -6,7 +6,7 @@
 //
 
 import CoreBluetooth
-import os.log
+import LoopKit
 
 
 protocol CBUUIDRawValue: RawRepresentable {}
@@ -108,7 +108,7 @@ extension Command {
 }
 
 
-private let log = OSLog(category: "PeripheralManager+RileyLink")
+private let log = DiagnosticLog(category: "PeripheralManager+RileyLink")
 
 
 extension PeripheralManager {

@@ -6,14 +6,14 @@
 //
 
 import CoreBluetooth
-import os.log
+import LoopKit
 
 
 /// TODO: Should we be tracking the most recent "pump" RSSI?
 public class RileyLinkDevice {
     let manager: PeripheralManager
 
-    private let log = OSLog(category: "RileyLinkDevice")
+    private let log = DiagnosticLog(category: "RileyLinkDevice")
 
     // Confined to `manager.queue`
     private var bleFirmwareVersion: BLEFirmwareVersion?

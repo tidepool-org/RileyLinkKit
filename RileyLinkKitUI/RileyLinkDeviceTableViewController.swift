@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import LoopKit
 import LoopKitUI
 import RileyLinkBLEKit
 import RileyLinkKit
-import os.log
 
 let CellIdentifier = "Cell"
 
 public class RileyLinkDeviceTableViewController: UITableViewController {
 
-    private let log = OSLog(category: "RileyLinkDeviceTableViewController")
+    private let log = DiagnosticLog(category: "RileyLinkDeviceTableViewController")
 
     public let device: RileyLinkDevice
 

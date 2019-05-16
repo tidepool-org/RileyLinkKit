@@ -6,12 +6,11 @@
 //
 
 import CoreBluetooth
-import os.log
 import LoopKit
 
 
 public class RileyLinkDeviceManager: NSObject {
-    private let log = OSLog(category: "RileyLinkDeviceManager")
+    private let log = DiagnosticLog(category: "RileyLinkDeviceManager")
 
     // Isolated to centralQueue
     private var central: CBCentralManager!
