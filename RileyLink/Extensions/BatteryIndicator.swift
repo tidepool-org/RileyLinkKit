@@ -8,6 +8,7 @@
 
 import LoopKit
 import MinimedKit
+import NightscoutUploadKit
 
 public extension BatteryIndicator {
     init?(batteryStatus: MinimedKit.BatteryStatus) {

@@ -7,8 +7,13 @@
 //
 
 import Foundation
-import LoopKit
 import MinimedKit
+
+public enum BatteryIndicator: String {
+    case low = "low"
+    case normal = "normal"
+}
+
 
 extension BatteryIndicator {
     public init?(batteryStatus: MinimedKit.BatteryStatus) {
@@ -23,7 +28,18 @@ extension BatteryIndicator {
     }
 }
 
-extension LoopKit.BatteryStatus {
+
+public struct BatteryStatus {
+    let percent: Int?
+    let voltage: Double?
+    let status: BatteryIndicator?
+
+    public init(percent: Int? = nil, voltage: Double? = nil, status: BatteryIndicator? = nil) {
+        self.percent = percent
+        self.voltage = voltage
+        self.status = status
+    }
+
     public var dictionaryRepresentation: [String: Any] {
         var rval = [String: Any]()
         

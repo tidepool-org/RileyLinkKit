@@ -8,7 +8,6 @@
 
 import Foundation
 import HealthKit
-import LoopKit
 
 public struct LoopStatus {
     let name: String

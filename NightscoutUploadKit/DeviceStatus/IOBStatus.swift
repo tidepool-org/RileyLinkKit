@@ -7,9 +7,18 @@
 //
 
 import Foundation
-import LoopKit
 
-extension IOBStatus {
+public struct IOBStatus {
+    let timestamp: Date
+    let iob: Double? // basal iob + bolus iob: can be negative
+    let basalIOB: Double? // does not include bolus iob
+
+    public init(timestamp: Date, iob: Double? = nil, basalIOB: Double? = nil) {
+        self.timestamp = timestamp
+        self.iob = iob
+        self.basalIOB = basalIOB
+    }
+
     public var dictionaryRepresentation: [String: Any] {
 
         var rval = [String: Any]()
