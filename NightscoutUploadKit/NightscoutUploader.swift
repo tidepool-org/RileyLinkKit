@@ -197,24 +197,7 @@ public class NightscoutUploader {
     }
     
     public func uploadProfiles(_ profileSets: [ProfileSet], completion: @escaping (Result<Bool, Error>) -> Void)  {
-        guard !profileSets.isEmpty else {
-            completion(.success(false))
-            return
-        }
-
-        guard let url = url(for: .profile) else {
-            completion(.failure(UploadError.missingConfiguration))
-            return
-        }
-
-        postToNS(profileSets.map { $0.dictionaryRepresentation } as [Any], url: url) { (result) in
-            switch result {
-            case .failure(let error):
-                completion(.failure(error))
-            case .success:
-                completion(.success(true))
-            }
-        }
+        postToNS(profileSets.map { $0.dictionaryRepresentation }, endpoint: .profile, completion: completion)
     }
 
     public func updateProfile(profileSet: ProfileSet, id: String, completion: @escaping (Error?) -> Void) {
@@ -260,6 +243,27 @@ public class NightscoutUploader {
                 completion(nil)
             case .failure(let error):
                 completion(error)
+            }
+        }
+    }
+
+    fileprivate func postToNS(_ json: [Any], endpoint: Endpoint, completion: @escaping (Result<Bool, Error>) -> Void)  {
+        guard !json.isEmpty else {
+            completion(.success(false))
+            return
+        }
+
+        guard let url = url(for: endpoint) else {
+            completion(.failure(UploadError.missingConfiguration))
+            return
+        }
+
+        postToNS(json, url: url) { result in
+            switch result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success:
+                completion(.success(true))
             }
         }
     }
@@ -399,24 +403,7 @@ public class NightscoutUploader {
     }
     
     public func uploadDeviceStatuses(_ deviceStatuses: [DeviceStatus], completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard !deviceStatuses.isEmpty else {
-            completion(.success(false))
-            return
-        }
-
-        guard let url = url(for: .deviceStatus) else {
-            completion(.failure(UploadError.missingConfiguration))
-            return
-        }
-
-        postToNS(deviceStatuses.map { $0.dictionaryRepresentation } as [Any], url: url) { (result) in
-            switch result {
-            case .failure(let error):
-                completion(.failure(error))
-            case .success:
-                completion(.success(true))
-            }
-        }
+        postToNS(deviceStatuses.map { $0.dictionaryRepresentation }, endpoint: .deviceStatus, completion: completion)
     }
 
     public func flushEntries() {
@@ -439,24 +426,7 @@ public class NightscoutUploader {
     }
     
     public func uploadEntries(_ entries: [NightscoutEntry], completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard !entries.isEmpty else {
-            completion(.success(false))
-            return
-        }
-
-        guard let url = url(for: .entries) else {
-            completion(.failure(UploadError.missingConfiguration))
-            return
-        }
-
-        postToNS(entries.map({$0.dictionaryRepresentation}), url: url) { result in
-            switch result {
-            case .failure(let error):
-                completion(.failure(error))
-            case .success:
-                completion(.success(true))
-            }
-        }
+        postToNS(entries.map { $0.dictionaryRepresentation }, endpoint: .entries, completion: completion)
     }
 
     func flushTreatments() {
