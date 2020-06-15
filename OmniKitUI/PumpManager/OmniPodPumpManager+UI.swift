@@ -33,7 +33,7 @@ extension OmnipodPumpManager: PumpManagerUI {
         return OmnipodHUDProvider(pumpManager: self)
     }
     
-    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [BaseHUDView] {
+    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [LevelHUDView] {
         return OmnipodHUDProvider.createHUDViews(rawValue: rawValue)
     }
 

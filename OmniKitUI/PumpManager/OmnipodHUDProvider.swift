@@ -109,7 +109,7 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
         }
     }
     
-    public func createHUDViews() -> [BaseHUDView] {
+    public func createHUDViews() -> [LevelHUDView] {
         self.reservoirView = OmnipodReservoirView.instantiate()
         self.updateReservoirView()
 
@@ -120,7 +120,7 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
             updateFaultDisplay()
         }
 
-        return [reservoirView, podLifeView].compactMap { $0 }
+        return [reservoirView].compactMap { $0 }
     }
     
     public func didTapOnHUDView(_ view: BaseHUDView) -> HUDTapAction? {
@@ -167,7 +167,7 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
         return rawValue
     }
     
-    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [BaseHUDView] {
+    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [LevelHUDView] {
         guard let podActivatedAt = rawValue["podActivatedAt"] as? Date,
             let lifetime = rawValue["lifetime"] as? Double,
             let rawAlerts = rawValue["alerts"] as? [PodAlert.RawValue] else
@@ -195,7 +195,7 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
         let podLifeHUDView = PodLifeHUDView.instantiate()
         podLifeHUDView.setPodLifeCycle(startTime: podActivatedAt, lifetime: lifetime)
         
-        return [reservoirView, podLifeHUDView]
+        return [reservoirView]
     }
     
     func podStateDidUpdate(_ podState: PodState?) {

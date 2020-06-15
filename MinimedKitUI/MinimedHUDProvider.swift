@@ -70,7 +70,7 @@ class MinimedHUDProvider: HUDProvider {
         }
     }
 
-    public func createHUDViews() -> [BaseHUDView] {
+    public func createHUDViews() -> [LevelHUDView] {
 
         reservoirView = ReservoirVolumeHUDView.instantiate()
         batteryView = BatteryLevelHUDView.instantiate()
@@ -80,7 +80,7 @@ class MinimedHUDProvider: HUDProvider {
             updateBatteryView()
         }
 
-        return [reservoirView, batteryView].compactMap { $0 }
+        return [reservoirView].compactMap { $0 }
     }
 
     public func didTapOnHUDView(_ view: BaseHUDView) -> HUDTapAction? {
@@ -101,7 +101,7 @@ class MinimedHUDProvider: HUDProvider {
         return rawValue
     }
 
-    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [BaseHUDView] {
+    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [LevelHUDView] {
         guard let pumpReservoirCapacity = rawValue["pumpReservoirCapacity"] as? Double else {
             return []
         }
@@ -120,7 +120,7 @@ class MinimedHUDProvider: HUDProvider {
         let batteryLevelHUDView = BatteryLevelHUDView.instantiate()
         batteryLevelHUDView.batteryLevel = batteryPercentage
 
-        return [reservoirVolumeHUDView, batteryLevelHUDView]
+        return [reservoirVolumeHUDView]
     }
 }
 

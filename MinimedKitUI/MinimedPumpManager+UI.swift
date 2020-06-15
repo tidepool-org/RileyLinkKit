@@ -31,7 +31,7 @@ extension MinimedPumpManager: PumpManagerUI {
         return MinimedHUDProvider(pumpManager: self)
     }
     
-    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [BaseHUDView] {
+    public static func createHUDViews(rawValue: HUDProvider.HUDViewsRawState) -> [LevelHUDView] {
         return MinimedHUDProvider.createHUDViews(rawValue: rawValue)
     }
 }
