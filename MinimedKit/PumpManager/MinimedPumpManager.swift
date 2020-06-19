@@ -364,6 +364,7 @@ extension MinimedPumpManager {
                     date: date,
                     quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: Double(glucose)),
                     isDisplayOnly: false,
+                    wasUserEntered: false,
                     syncIdentifier: status.glucoseSyncIdentifier ?? UUID().uuidString,
                     device: self.device
                 )
@@ -1192,7 +1193,7 @@ extension MinimedPumpManager: CGMManager {
                         .map {
                             let glucoseEvent = $0.glucoseEvent as! SensorValueGlucoseEvent
                             let quantity = HKQuantity(unit: unit, doubleValue: Double(glucoseEvent.sgv))
-                            return NewGlucoseSample(date: $0.date, quantity: quantity, isDisplayOnly: false, syncIdentifier: glucoseEvent.glucoseSyncIdentifier ?? UUID().uuidString, device: self.device)
+                            return NewGlucoseSample(date: $0.date, quantity: quantity, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: glucoseEvent.glucoseSyncIdentifier ?? UUID().uuidString, device: self.device)
                     }
 
                     completion(.newData(glucoseValues))
@@ -1204,14 +1205,14 @@ extension MinimedPumpManager: CGMManager {
     }
 }
 
-// MARK: - DeviceAlertResponder implementation
+// MARK: - AlertResponder implementation
 extension MinimedPumpManager {
-    public func acknowledgeAlert(alertIdentifier: DeviceAlert.AlertIdentifier) { }
+    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) { }
 }
 
-// MARK: - DeviceAlertSoundVendor implementation
+// MARK: - AlertSoundVendor implementation
 extension MinimedPumpManager {
     public func getSoundBaseURL() -> URL? { return nil }
-    public func getSounds() -> [DeviceAlert.Sound] { return [] }
+    public func getSounds() -> [Alert.Sound] { return [] }
 }
 
