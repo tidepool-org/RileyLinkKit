@@ -96,8 +96,8 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
         pumpManager.refreshStatus()
     }
 
-    public var hudViewsRawState: HUDProvider.HUDViewsRawState {
-        var rawValue: HUDProvider.HUDViewsRawState = [:]
+    public var hudViewRawState: HUDProvider.HUDViewRawState {
+        var rawValue: HUDProvider.HUDViewRawState = [:]
         
         if let podState = podState {
             rawValue["alerts"] = podState.activeAlerts.values.map { $0.rawValue }
@@ -111,7 +111,7 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
         return rawValue
     }
     
-    public static func createHUDView(rawValue: HUDProvider.HUDViewsRawState) -> LevelHUDView? {
+    public static func createHUDView(rawValue: HUDProvider.HUDViewRawState) -> LevelHUDView? {
         guard let rawAlerts = rawValue["alerts"] as? [PodAlert.RawValue] else {
             return nil
         }

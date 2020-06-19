@@ -72,8 +72,8 @@ class MinimedHUDProvider: HUDProvider {
         return nil
     }
 
-    public var hudViewsRawState: HUDProvider.HUDViewsRawState {
-        var rawValue: HUDProvider.HUDViewsRawState = [
+    public var hudViewRawState: HUDProvider.HUDViewRawState {
+        var rawValue: HUDProvider.HUDViewRawState = [
             "pumpReservoirCapacity": pumpManager.pumpReservoirCapacity
         ]
 
@@ -84,7 +84,7 @@ class MinimedHUDProvider: HUDProvider {
         return rawValue
     }
 
-    public static func createHUDView(rawValue: HUDProvider.HUDViewsRawState) -> LevelHUDView? {
+    public static func createHUDView(rawValue: HUDProvider.HUDViewRawState) -> LevelHUDView? {
         guard let pumpReservoirCapacity = rawValue["pumpReservoirCapacity"] as? Double else {
             return nil
         }
