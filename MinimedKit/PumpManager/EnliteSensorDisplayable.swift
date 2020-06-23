@@ -41,3 +41,26 @@ extension MinimedKit.RelativeTimestampedGlucoseEvent {
         return true
     }
 }
+
+// TODO Placeholders. This functionality will come with LOOP-1311
+extension EnliteSensorDisplayable: CGMManagerStatusReport {
+    var glucoseValueType: GlucoseValueType? {
+        return nil
+    }
+    
+    var message: String? {
+        return nil
+    }
+    
+    var messageType: LoopKit.MessageType? {
+        return nil
+    }
+    
+    var displayProgress: Bool {
+        return false
+    }
+    
+    var progressPercentCompleted: Double? {
+        return nil
+    }
+}

@@ -1158,7 +1158,7 @@ extension MinimedPumpManager: CGMManager {
         return nil
     }
 
-    public var sensorState: SensorDisplayable? {
+    public var statusReport: CGMManagerStatusReport? {
         return recents.sensorState
     }
 
