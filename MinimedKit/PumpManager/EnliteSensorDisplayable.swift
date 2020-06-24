@@ -14,6 +14,11 @@ struct EnliteSensorDisplayable: Equatable, SensorDisplayable {
     public let isStateValid: Bool
     public let trendType: LoopKit.GlucoseTrend?
     public let isLocal: Bool
+    
+    // TODO Placeholder. This functionality will come with LOOP-1311
+    var glucoseValueType: GlucoseValueType? {
+        return nil
+    }
 
     public init(_ event: MinimedKit.RelativeTimestampedGlucoseEvent) {
         isStateValid = event.isStateValid
@@ -39,28 +44,5 @@ extension MinimedKit.RelativeTimestampedGlucoseEvent {
 
     var isLocal: Bool {
         return true
-    }
-}
-
-// TODO Placeholders. This functionality will come with LOOP-1311
-extension EnliteSensorDisplayable: CGMManagerStatusReport {
-    var glucoseValueType: GlucoseValueType? {
-        return nil
-    }
-    
-    var message: String? {
-        return nil
-    }
-    
-    var messageType: LoopKit.MessageType? {
-        return nil
-    }
-    
-    var displayProgress: Bool {
-        return false
-    }
-    
-    var progressPercentCompleted: Double? {
-        return nil
     }
 }
