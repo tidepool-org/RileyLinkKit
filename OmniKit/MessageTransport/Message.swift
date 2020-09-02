@@ -26,7 +26,7 @@ extension MessageError: LocalizedError {
         case .parsingError:
             return LocalizedString("Parsing Error: ", comment: "Description for MessageError parsingError")
         case .unknownValue(let value, let typeDescription):
-            return String(format: LocalizedString("Unknown Value (%1$@) for type %1$@", comment: "Format string for description of MessageError unknownValue. (1: value) (2: Type)"), String(describing: value), typeDescription)
+            return String(format: LocalizedString("Unknown Value (%1$@) for type %2$@", comment: "Format string for description of MessageError unknownValue. (1: value) (2: Type)"), String(describing: value), typeDescription)
         case .validationFailed(let description):
             return String(format: LocalizedString("Validation failed: %1$@", comment: "Format string for description of MessageError validationFailed. (1: description of validation failure)"), description)
         }
