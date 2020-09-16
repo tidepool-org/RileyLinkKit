@@ -1298,12 +1298,11 @@ extension OmnipodPumpManager: PumpManager {
         }
     }
 
-    public func assertCurrentPumpData() {
+    public func ensureCurrentPumpData(completion: (() -> Void)?) {
         let shouldFetchStatus = setStateWithResult { (state) -> Bool? in
             guard state.hasActivePod else {
                 return nil // No active pod
             }
-
             return state.isPumpDataStale
         }
 
@@ -1320,12 +1319,14 @@ extension OmnipodPumpManager: PumpManager {
                     case .failure(let error):
                         self.log.default("Not recommending Loop because pump data is stale: %@", String(describing: error))
                         delegate?.pumpManager(self, didError: error)
+                        completion?()
                     }
                 })
             }
         case false?:
             log.default("Skipping status update because pumpData is fresh")
             pumpDelegate.notify { (delegate) in
+                completion?()
                 self.recommendLoopIfNeeded(delegate)
             }
         }
