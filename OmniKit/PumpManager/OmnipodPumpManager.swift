@@ -1308,6 +1308,7 @@ extension OmnipodPumpManager: PumpManager {
 
         switch shouldFetchStatus {
         case .none:
+            completion?()
             return // No active pod
         case true?:
             log.default("Fetching status because pumpData is too old")
