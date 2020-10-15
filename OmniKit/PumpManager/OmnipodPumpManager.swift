@@ -335,9 +335,9 @@ extension OmnipodPumpManager {
         }
     }
 
-    private func bolusState(for state: OmnipodPumpManagerState) -> PumpManagerStatus.BolusState? {
+    private func bolusState(for state: OmnipodPumpManagerState) -> PumpManagerStatus.BolusState {
         guard let podState = state.podState else {
-            return nil
+            return .noBolus
         }
 
         switch state.bolusEngageState {
@@ -350,7 +350,7 @@ extension OmnipodPumpManager {
                 return .inProgress(DoseEntry(bolus))
             }
         }
-        return .inactive
+        return .noBolus
     }
     
     private func pumpStatusHighlight(for state: OmnipodPumpManagerState) -> PumpManagerStatus.PumpStatusHighlight? {
