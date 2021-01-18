@@ -92,9 +92,9 @@ internal class OmnipodHUDProvider: NSObject, HUDProvider, PodStateObserver {
     
     public func didTapOnHUDView(_ view: BaseHUDView) -> HUDTapAction? {
         if podState?.fault != nil {
-            return HUDTapAction.presentPumpViewController(PodReplacementNavigationController.instantiatePodReplacementFlow(pumpManager))
+            return HUDTapAction.presentViewController(PodReplacementNavigationController.instantiatePodReplacementFlow(pumpManager))
         } else {
-            return HUDTapAction.presentPumpViewController(pumpManager.settingsViewController(insulinTintColor: insulinTintColor, guidanceColors: guidanceColors))
+            return HUDTapAction.presentViewController(pumpManager.settingsViewController(insulinTintColor: insulinTintColor, guidanceColors: guidanceColors))
         }
     }
     
