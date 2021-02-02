@@ -14,7 +14,7 @@ import MinimedKit
 
 extension MinimedPumpManager: PumpManagerUI {
 
-    static public func setupViewController(initialSettings settings: PumpManagerSettings, colorPalette: LoopUIColorPalette) -> UIResult<UIViewController & PumpManagerCreateNotifying & PumpManagerOnboardNotifying & CompletionNotifying, PumpManagerUI, Error> {
+    static public func setupViewController(initialSettings settings: PumpManagerSetupSettings, colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & PumpManagerCreateNotifying & PumpManagerOnboardNotifying & CompletionNotifying, PumpManagerUI> {
         let setupViewController = MinimedPumpManagerSetupViewController.instantiateFromStoryboard()
         setupViewController.maxBasalRateUnitsPerHour = settings.maxBasalRateUnitsPerHour
         setupViewController.maxBolusUnits = settings.maxBolusUnits

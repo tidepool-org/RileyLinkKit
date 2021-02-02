@@ -228,7 +228,7 @@ extension MainViewController: PumpManagerCreateDelegate {
 }
 
 extension MainViewController: PumpManagerOnboardDelegate {
-    func pumpManagerOnboardNotifying(_ notifying: PumpManagerOnboardNotifying, didOnboardPumpManager pumpManager: PumpManagerUI, withSettings settings: PumpManagerSettings) {
+    func pumpManagerOnboardNotifying(_ notifying: PumpManagerOnboardNotifying, didOnboardPumpManager pumpManager: PumpManagerUI, withSettings settings: PumpManagerSetupSettings) {
         show(pumpManager.settingsViewController(insulinTintColor: insulinTintColor, guidanceColors: guidanceColors), sender: nil)
         tableView.reloadSections(IndexSet([Section.pump.rawValue]), with: .none)
     }

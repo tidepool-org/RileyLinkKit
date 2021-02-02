@@ -122,15 +122,15 @@ public class MinimedPumpManagerSetupViewController: RileyLinkManagerSetupViewCon
     }
 
     public func pumpManagerSetupComplete(_ pumpManager: PumpManagerUI) {
-        pumpManagerCreateDelegate?.pumpManagerCreateNotifying(self, didCreatePumpManager: pumpManager)
+        pumpManagerCreateDelegate?.pumpManagerCreateNotifying(didCreatePumpManager: pumpManager)
     }
 
     override open func finishedSetup() {
         if let pumpManager = pumpManager {
             pumpManager.completeOnboard()
 
-            let settings = PumpManagerSettings(maxBasalRateUnitsPerHour: maxBasalRateUnitsPerHour, maxBolusUnits: maxBolusUnits, basalSchedule: basalSchedule)
-            pumpManagerOnboardDelegate?.pumpManagerOnboardNotifying(self, didOnboardPumpManager: pumpManager, withFinalSettings: settings)
+            let settings = PumpManagerSetupSettings(maxBasalRateUnitsPerHour: maxBasalRateUnitsPerHour, maxBolusUnits: maxBolusUnits, basalSchedule: basalSchedule)
+            pumpManagerOnboardDelegate?.pumpManagerOnboardNotifying(didOnboardPumpManager: pumpManager, withFinalSettings: settings)
 
             let settingsViewController = MinimedPumpSettingsViewController(pumpManager: pumpManager)
             setViewControllers([settingsViewController], animated: true)
