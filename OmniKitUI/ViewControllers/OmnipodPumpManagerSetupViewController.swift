@@ -102,7 +102,6 @@ public class OmnipodPumpManagerSetupViewController: RileyLinkManagerSetupViewCon
         if let pumpManager = pumpManager {
             pumpManager.completeOnboard()
 
-            let settings = PumpManagerSetupSettings(maxBasalRateUnitsPerHour: maxBasalRateUnitsPerHour, maxBolusUnits: maxBolusUnits, basalSchedule: basalSchedule)
             pumpManagerOnboardingDelegate?.pumpManagerOnboarding(didOnboardPumpManager: pumpManager)
             
             let settingsViewController = OmnipodSettingsViewController(pumpManager: pumpManager)
