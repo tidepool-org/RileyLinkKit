@@ -234,7 +234,6 @@ public struct MinimedPumpManagerState: RawRepresentable, Equatable {
         } else {
             recentlyReconciledEvents = [:]
         }
-        reconciliationMappings = recentlyReconciledEvents
         
         let lastReconciliation = rawValue["lastSync"] as? Date
         
