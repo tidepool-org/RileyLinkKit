@@ -416,7 +416,7 @@ extension MinimedPumpManager {
 
         pumpDelegate.notify { (delegate) in
             delegate?.pumpManager(self, didReadReservoirValue: units, at: date) { (result) in
-                self.pumpManagerDelegateDidProcessReservoirValue(result)
+                self.pumpManagerDelegateDidProcessReservoirValue(result, at: date)
             }
         }
 
@@ -425,27 +425,21 @@ extension MinimedPumpManager {
     }
 
     /// Called on an unknown queue by the delegate
-    private func pumpManagerDelegateDidProcessReservoirValue(_ result: Result<(newValue: ReservoirValue, lastValue: ReservoirValue?, areStoredValuesContinuous: Bool), Error>) {
+    private func pumpManagerDelegateDidProcessReservoirValue(_ result: Result<(newValue: ReservoirValue, lastValue: ReservoirValue?, areStoredValuesContinuous: Bool), Error>, at validDate: Date) {
         switch result {
         case .failure:
             break
         case .success(let (_, _, areStoredValuesContinuous)):
-            // Run a loop as long as we have fresh, reliable pump data.
+            if areStoredValuesContinuous {
+                recents.lastContinuousReservoir = validDate
+            }
             if state.preferredInsulinDataSource == .pumpHistory || !areStoredValuesContinuous {
                 fetchPumpHistory { (error) in  // Can be centralQueue or sessionQueue
                     self.pumpDelegate.notify { (delegate) in
                         if let error = error as? PumpManagerError {
                             delegate?.pumpManager(self, didError: error)
                         }
-
-                        if error == nil || areStoredValuesContinuous {
-                            delegate?.pumpManagerRecommendsLoop(self)
-                        }
                     }
-                }
-            } else {
-                pumpDelegate.notify { (delegate) in
-                    delegate?.pumpManagerRecommendsLoop(self)
                 }
             }
         }
@@ -561,7 +555,7 @@ extension MinimedPumpManager {
                         
                         let pendingEvents = (self.state.pendingDoses + [self.state.unfinalizedBolus, self.state.unfinalizedTempBasal]).compactMap({ $0?.newPumpEvent })
 
-                        delegate.pumpManager(self, hasNewPumpEvents: remainingHistoryEvents + pendingEvents, lastReconciliation: self.lastReconciliation, completion: { (error) in
+                        delegate.pumpManager(self, hasNewPumpEvents: remainingHistoryEvents + pendingEvents, lastSync: self.lastSync, completion: { (error) in
                             // Called on an unknown queue by the delegate
                             if error == nil {
                                 self.recents.lastAddedPumpEvents = Date()
@@ -604,7 +598,7 @@ extension MinimedPumpManager {
                 preconditionFailure("pumpManagerDelegate cannot be nil")
             }
 
-            delegate.pumpManager(self, hasNewPumpEvents: events, lastReconciliation: self.lastReconciliation, completion: { (error) in
+            delegate.pumpManager(self, hasNewPumpEvents: events, lastSync: self.lastSync, completion: { (error) in
                 // Called on an unknown queue by the delegate
                 self.log.error("Pump event storage failed: %{public}@", String(describing: error))
                 completion(MinimedPumpManagerError.storageFailure)
@@ -728,8 +722,8 @@ extension MinimedPumpManager: PumpManager {
 
     public var isOnboarded: Bool { state.isOnboarded }
 
-    public var lastReconciliation: Date? {
-        return state.lastReconciliation
+    public var lastSync: Date? {
+        return [state.lastReconciliation, recents.lastContinuousReservoir].compactMap { $0 }.max()
     }
     
     private func status(for state: MinimedPumpManagerState, recents: MinimedPumpManagerRecents) -> PumpManagerStatus {
@@ -846,11 +840,11 @@ extension MinimedPumpManager: PumpManager {
     /**
      Ensures pump data is current by either waking and polling, or ensuring we're listening to sentry packets.
      */
-    public func ensureCurrentPumpData(completion: (() -> Void)?) {
+    public func ensureCurrentPumpData(completion: ((Date?) -> Void)?) {
         rileyLinkDeviceProvider.assertIdleListening(forcingRestart: true)
 
         guard isPumpDataStale else {
-            completion?()
+            completion?(self.lastSync)
             return
         }
 
@@ -862,14 +856,14 @@ extension MinimedPumpManager: PumpManager {
                 self.log.error("No devices found while fetching pump data")
                 self.pumpDelegate.notify({ (delegate) in
                     delegate?.pumpManager(self, didError: error)
-                    completion?()
+                    completion?(self.lastSync)
                 })
                 return
             }
 
             self.pumpOps.runSession(withName: "Get Pump Status", using: device) { (session) in
                 do {
-                    defer { completion?() }
+                    defer { completion?(self.lastSync) }
                     
                     let status = try session.getCurrentPumpStatus()
                     guard var date = status.clock.date else {

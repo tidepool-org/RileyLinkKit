@@ -234,8 +234,9 @@ public struct MinimedPumpManagerState: RawRepresentable, Equatable {
         } else {
             recentlyReconciledEvents = [:]
         }
+        reconciliationMappings = recentlyReconciledEvents
         
-        let lastReconciliation = rawValue["lastReconciliation"] as? Date
+        let lastReconciliation = rawValue["lastSync"] as? Date
         
         self.init(
             isOnboarded: isOnboarded,
@@ -283,7 +284,7 @@ public struct MinimedPumpManagerState: RawRepresentable, Equatable {
         value["rileyLinkConnectionManagerState"] = rileyLinkConnectionManagerState?.rawValue
         value["unfinalizedBolus"] = unfinalizedBolus?.rawValue
         value["unfinalizedTempBasal"] = unfinalizedTempBasal?.rawValue
-        value["lastReconciliation"] = lastReconciliation
+        value["lastSync"] = lastReconciliation
 
         return value
     }
@@ -317,7 +318,7 @@ extension MinimedPumpManagerState: CustomDebugStringConvertible {
             "pendingDoses: \(pendingDoses)",
             "timeZone: \(timeZone)",
             "recentlyReconciledEvents: \(reconciliationMappings.values.map { "\($0.eventRaw.hexadecimalString) -> \($0.uuid)" })",
-            "lastReconciliation: \(String(describing: lastReconciliation))",
+            "lastSync: \(String(describing: lastReconciliation))",
             String(reflecting: rileyLinkConnectionManagerState),
         ].joined(separator: "\n")
     }

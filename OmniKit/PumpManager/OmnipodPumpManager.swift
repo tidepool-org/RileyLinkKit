@@ -215,8 +215,6 @@ public class OmnipodPumpManager: RileyLinkPumpManager {
 
     public let log = OSLog(category: "OmnipodPumpManager")
     
-    private var lastLoopRecommendation: Date?
-
     // MARK: - RileyLink Updates
 
     override public var rileyLinkConnectionManagerState: RileyLinkConnectionManagerState? {
@@ -1156,7 +1154,7 @@ extension OmnipodPumpManager: PumpManager {
 
     public var isOnboarded: Bool { state.isOnboarded }
 
-    public var lastReconciliation: Date? {
+    public var lastSync: Date? {
         return self.state.podState?.lastInsulinMeasurements?.validTime
     }
 
@@ -1296,16 +1294,7 @@ extension OmnipodPumpManager: PumpManager {
         rileyLinkDeviceProvider.timerTickEnabled = self.state.isPumpDataStale || mustProvideBLEHeartbeat
     }
     
-    // Called only from pumpDelegate notify block
-    private func recommendLoopIfNeeded(_ delegate: PumpManagerDelegate?) {
-        if lastLoopRecommendation == nil || lastLoopRecommendation!.timeIntervalSinceNow < .minutes(-4.5) {
-            self.log.default("Recommending Loop")
-            lastLoopRecommendation = Date()
-            delegate?.pumpManagerRecommendsLoop(self)
-        }
-    }
-
-    public func ensureCurrentPumpData(completion: (() -> Void)?) {
+    public func ensureCurrentPumpData(completion: ((Date?) -> Void)?) {
         let shouldFetchStatus = setStateWithResult { (state) -> Bool? in
             guard state.hasActivePod else {
                 return nil // No active pod
@@ -1315,28 +1304,24 @@ extension OmnipodPumpManager: PumpManager {
 
         switch shouldFetchStatus {
         case .none:
-            completion?()
+            completion?(lastSync)
             return // No active pod
         case true?:
             log.default("Fetching status because pumpData is too old")
             getPodStatus(storeDosesOnSuccess: true) { (response) in
                 self.pumpDelegate.notify({ (delegate) in
                     switch response {
-                    case .success:
-                        self.recommendLoopIfNeeded(delegate)
                     case .failure(let error):
-                        self.log.default("Not recommending Loop because pump data is stale: %@", String(describing: error))
                         delegate?.pumpManager(self, didError: error)
-                        completion?()
+                    default:
+                        break
                     }
+                    completion?(self.lastSync)
                 })
             }
         case false?:
             log.default("Skipping status update because pumpData is fresh")
-            pumpDelegate.notify { (delegate) in
-                completion?()
-                self.recommendLoopIfNeeded(delegate)
-            }
+            completion?(lastSync)
         }
     }
 
@@ -1626,14 +1611,14 @@ extension OmnipodPumpManager: PumpManager {
     }
 
     func store(doses: [UnfinalizedDose], completion: @escaping (_ error: Error?) -> Void) {
-        let lastPumpReconciliation = lastReconciliation
+        let lastSync = lastSync
 
         pumpDelegate.notify { (delegate) in
             guard let delegate = delegate else {
                 preconditionFailure("pumpManagerDelegate cannot be nil")
             }
 
-            delegate.pumpManager(self, hasNewPumpEvents: doses.map { NewPumpEvent($0) }, lastReconciliation: lastPumpReconciliation, completion: { (error) in
+            delegate.pumpManager(self, hasNewPumpEvents: doses.map { NewPumpEvent($0) }, lastSync: lastSync, completion: { (error) in
                 if let error = error {
                     self.log.error("Error storing pod events: %@", String(describing: error))
                 } else {
