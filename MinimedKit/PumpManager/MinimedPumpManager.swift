@@ -144,9 +144,7 @@ public class MinimedPumpManager: RileyLinkPumpManager {
                     setState { (state) in
                         state.batteryPercentage = newBatteryPercentage
                     }
-                    if let newBatteryPercentage = newBatteryPercentage {
-                        checkPumpBattery(oldBatteryPercentage: oldBatteryPercentage, newBatteryPercentage: newBatteryPercentage)
-                    }
+                    checkPumpBattery(oldBatteryPercentage: oldBatteryPercentage, newBatteryPercentage: newBatteryPercentage)
                 }
             }
             if oldStatus != status {
