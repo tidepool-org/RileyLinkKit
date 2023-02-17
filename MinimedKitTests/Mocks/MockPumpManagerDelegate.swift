@@ -10,6 +10,7 @@ import Foundation
 import LoopKit
 
 class MockPumpManagerDelegate: PumpManagerDelegate {
+    var automaticDosingEnabled: Bool { true }
 
     func pumpManagerBLEHeartbeatDidFire(_ pumpManager: PumpManager) {}
 
