@@ -862,7 +862,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C12EA232198B436800309FA4 /* Build configuration list for PBXProject "RileyLink" */;
+			buildConfigurationList = C12EA232198B436800309FA4 /* Build configuration list for PBXProject "RileyLinkKit" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1712,7 +1712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C12EA232198B436800309FA4 /* Build configuration list for PBXProject "RileyLink" */ = {
+		C12EA232198B436800309FA4 /* Build configuration list for PBXProject "RileyLinkKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C12EA261198B436900309FA4 /* Debug */,
