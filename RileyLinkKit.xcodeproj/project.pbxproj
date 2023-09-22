@@ -108,7 +108,6 @@
 		C14FFC5B1D3D74F90049CF85 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC5A1D3D74F90049CF85 /* NibLoadable.swift */; };
 		C14FFC611D3D75470049CF85 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC601D3D75470049CF85 /* UIColor.swift */; };
 		C14FFC631D3D7CE20049CF85 /* NightscoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC621D3D7CE20049CF85 /* NightscoutService.swift */; };
-		C14FFC651D3D7E250049CF85 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC641D3D7E250049CF85 /* RemoteDataManager.swift */; };
 		C14FFC671D3D7E390049CF85 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC661D3D7E390049CF85 /* KeychainManager.swift */; };
 		C14FFC691D3D7E560049CF85 /* KeychainManager+RileyLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FFC681D3D7E560049CF85 /* KeychainManager+RileyLink.swift */; };
 		C17884611D519F1E00405663 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17884601D519F1E00405663 /* BatteryIndicator.swift */; };
@@ -229,7 +228,6 @@
 		43722FB21CB9F7640038B7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43722FC01CB9F7640038B7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437462381FA9287A00643383 /* RileyLinkDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RileyLinkDevice.swift; sourceTree = "<group>"; };
-		437DE508229C8A05003B1074 /* copy-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "copy-frameworks.sh"; sourceTree = "<group>"; };
 		439731261CF21C3C00F474E5 /* RileyLinkDeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RileyLinkDeviceTableViewCell.swift; sourceTree = "<group>"; };
 		43BA719A202591A70058961E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		43BA719C2026C9B00058961E /* ResponseBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBuffer.swift; sourceTree = "<group>"; };
@@ -333,7 +331,6 @@
 		C14FFC5A1D3D74F90049CF85 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		C14FFC601D3D75470049CF85 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C14FFC621D3D7CE20049CF85 /* NightscoutService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightscoutService.swift; sourceTree = "<group>"; };
-		C14FFC641D3D7E250049CF85 /* RemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
 		C14FFC661D3D7E390049CF85 /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		C14FFC681D3D7E560049CF85 /* KeychainManager+RileyLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainManager+RileyLink.swift"; sourceTree = "<group>"; };
 		C151BED32981EE6000F3A41F /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/LoopKit.strings; sourceTree = "<group>"; };
@@ -507,14 +504,6 @@
 			path = RileyLinkKitTests;
 			sourceTree = "<group>";
 		};
-		437DE504229C898D003B1074 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				437DE508229C8A05003B1074 /* copy-frameworks.sh */,
-			);
-			path = Scripts;
-			sourceTree = "<group>";
-		};
 		43D5E78F1FAF7BFB004ACDB7 /* RileyLinkKitUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,7 +576,6 @@
 				43D5E78F1FAF7BFB004ACDB7 /* RileyLinkKitUI */,
 				C12EA239198B436800309FA4 /* Frameworks */,
 				C12EA238198B436800309FA4 /* Products */,
-				437DE504229C898D003B1074 /* Scripts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -695,7 +683,6 @@
 			children = (
 				C14FFC661D3D7E390049CF85 /* KeychainManager.swift */,
 				C14FFC681D3D7E560049CF85 /* KeychainManager+RileyLink.swift */,
-				C14FFC641D3D7E250049CF85 /* RemoteDataManager.swift */,
 				C1B383351CD1BA8100CE7782 /* DeviceDataManager.swift */,
 				C125728E2121DB7C0061BA2F /* PumpManagerState.swift */,
 			);
@@ -1057,7 +1044,6 @@
 				C125728C2121D4D60061BA2F /* UITableViewCell.swift in Sources */,
 				C14FFC551D3D72A50049CF85 /* UIViewController.swift in Sources */,
 				7D2366F0212527DA0028B67D /* LocalizedString.swift in Sources */,
-				C14FFC651D3D7E250049CF85 /* RemoteDataManager.swift in Sources */,
 				C17884611D519F1E00405663 /* BatteryIndicator.swift in Sources */,
 				437462391FA9287A00643383 /* RileyLinkDevice.swift in Sources */,
 				C1274F801D82411C0002912B /* MainViewController.swift in Sources */,
